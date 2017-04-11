@@ -37,10 +37,14 @@ public class Main {
         BaseballPlayer tim = new BaseballPlayer("Tim");
         SoccerPlayer mark = new SoccerPlayer("Mark");
 
-        Team javaLovers = new Team("JAVELIN");
+        Team<FootballPlayer> javaLovers = new Team<>("JAVELIN");
         javaLovers.addPlayer(joe);
-        javaLovers.addPlayer(tim);
-        javaLovers.addPlayer(mark);
+//        javaLovers.addPlayer(tim);
+//        javaLovers.addPlayer(mark);
+        Team<BaseballPlayer> baseballTeam = new Team<>("NewTEAM!");
+        baseballTeam.addPlayer(tim);
+        Team<SoccerPlayer> soccerTeam = new Team<>("Soccer team!");
+        soccerTeam.addPlayer(mark);
 
         System.out.println(javaLovers.teamSize());
 

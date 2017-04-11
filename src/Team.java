@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Created by Pawel Krowicki on 12.04.2017.
  */
-public class Team {
+public class Team<T extends Player> {
 
     private String teamName;
     int played = 0;
@@ -11,7 +11,7 @@ public class Team {
     int lost = 0;
     int tied = 0;
 
-    private ArrayList<Player> members = new ArrayList<>();
+    private ArrayList<T> members = new ArrayList<>();
 
     public Team(String teamName) {
         this.teamName = teamName;
@@ -21,9 +21,9 @@ public class Team {
         return teamName;
     }
 
-    public boolean addPlayer(Player player){
+    public boolean addPlayer(T player){
         if (members.contains(player)){
-            System.out.println("Player already on the team");
+            System.out.println(player.getName() + " is already on the team");
             return false;
         } else {
             members.add(player);
