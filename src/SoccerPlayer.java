@@ -1,11 +1,9 @@
 /**
  * Created by Pawel Krowicki on 12.04.2017.
  */
-public class Spearrow extends Bird {
+public class SoccerPlayer extends Player {
 
-    public Spearrow(String name) {
+    public SoccerPlayer(String name) {
         super(name);
     }
-
-
 }
